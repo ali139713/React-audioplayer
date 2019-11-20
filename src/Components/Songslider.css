@@ -1,0 +1,25 @@
+
+.song-slider{
+    margin-top:2.5%;
+    margin-left:8%;
+    width: 70%;
+    height: 7%;
+    -webkit-appearance: none;
+    border-radius: 10%;
+    background: linear-gradient(-120deg, rgb(61, 61, 228), rgb(117, 179, 199));
+    outline: none;
+}
+
+.song-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: dimgray;
+    cursor: pointer;
+    outline: none;
+}
+
+.song-slider :active::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 0 3px #797777, 0 0 0 6px #c7a8a8;
+}

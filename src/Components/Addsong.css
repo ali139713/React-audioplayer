@@ -1,0 +1,17 @@
+.song{
+    display: flex;
+    flex: 1;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 9px black; 
+    justify-content: center;
+    align-items: center;
+    
+}
+#fileInput{
+    display:none;
+}
+label{
+    border-radius: 30%;
+    box-shadow: 3px 5px 7px black;
+}

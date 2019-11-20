@@ -1,0 +1,9 @@
+
+.playerbody {
+    background-color:whitesmoke ;
+    flex: 1.1;
+    display: flex;
+    box-shadow: 0px 4px 9px black;  
+    border-radius: 10px;
+
+}

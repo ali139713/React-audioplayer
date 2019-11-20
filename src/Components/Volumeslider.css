@@ -1,0 +1,22 @@
+
+.volume-slider {
+    width: 25%;
+    margin-top:2%;
+    margin-left: 70%;
+    height: 4%;
+    -webkit-appearance: none;
+    border-radius: 25%;
+    /* background-color: blue; */
+    background: linear-gradient(-120deg, rgb(61, 61, 228), rgb(117, 179, 199));
+    outline: none;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: dimgray;
+    cursor: pointer;
+    outline: none;
+}

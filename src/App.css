@@ -1,0 +1,7 @@
+.app {
+    background-image: linear-gradient(to right, rgba(6, 12, 27, 0.575), rgba(7, 7, 34, 0.815));
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

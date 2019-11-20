@@ -26,7 +26,10 @@ class Playlist extends Component{
        audio.srcObject=selectedSongs[songIndex];
        audio.play();
         
-        {console.log(selectedSongs)};
+
+
+       
+        {console.log(selectedSongs)};   
       
     }
   

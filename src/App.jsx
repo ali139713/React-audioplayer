@@ -6,14 +6,31 @@ import Playlist from './Components/Playlist';
 
 
 class App extends Component {
+ 
+   
+    
+
+    state = {
+      selectedSongs: [],
+  };
+
+
+
+  onUpdateState=(selectedSongs)=>{
+    this.setState({selectedSongs});
+
+  }
+  
+  
 
   render() {
-
+        const selectedSongs=this.state.selectedSongs;
+        console.log({selectedSongs})
     return (
     <div className="app">
       
-           <Playerbody/>
-           <Playlist/>
+           <Playerbody  Songs={selectedSongs}/>
+           <Playlist Songs={selectedSongs}  onSongChange={this.onUpdateState}/>
   
    </div>
     

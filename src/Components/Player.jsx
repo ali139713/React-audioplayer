@@ -17,6 +17,7 @@ class Player extends Component{
 
         switch(name){
             case 'play':
+                
              
                 break;
             case 'previous':
@@ -39,11 +40,11 @@ class Player extends Component{
                 <Songslider/>
                 <Time/>
                 <div className="Row">
-                    <Button icon='previous' onClick={this.handleOnClick} />
-                    <Button icon='forward' onClick={this.handleOnClick} />
+                    <Button icon='step-backward' onClick={this.handleOnClick} />
+                    <Button icon='backward' onClick={this.handleOnClick} />
                     <Button icon='play' onClick={this.handleOnClick} />
                     <Button icon='forward' onClick={this.handleOnClick} />
-                    <Button icon='next' onClick={this.handleOnClick} />
+                    <Button icon='step-forward' onClick={this.handleOnClick} />
                     </div>
 
                     <Volumeslider/>

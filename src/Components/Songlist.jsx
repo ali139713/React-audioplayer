@@ -1,35 +1,31 @@
 import "./Songlist.css";
-import React, { Component } from 'react';
+import React from 'react';
 
 
-const SongItem = ({song, onClick}) => {
+const SongItem = ({ song, onClick }) => {
     return (
-           
-        <li className='song-item' onClick={onClick}>{song.name}</li>
-     
+        <li className='song-item' onClick={() => {
+            onClick(song)
+        }}>{song.name}</li>
     );
 }
 
-const Songlist = ({songs, onClick}) => {
-  
-
+const Songlist = ({ songs, onClick }) => {
     return (
         <div className='song-list'>
             <ul>
-                {   
-                     
+                {
                     songs.map((song, index) => {
                         return (
-                           
-                            <SongItem onClick={onClick} className='song-item' key={index} song={song}/>
-                           
+
+                            <SongItem onClick={onClick} className='song-item' key={index} song={song} />
+
                         );
                     })
-                
-                }       
+
+                }
             </ul>
-         </div>
-    ); 
+        </div>
+    );
 }
 export default Songlist;
-

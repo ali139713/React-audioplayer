@@ -2,13 +2,20 @@
 const init = () => {
     const audio = new Audio();
 
-    const setSong = (path) => {};
-    const play = () => {};
+    const setSong = (src) => {
+        if (!src) return;
+
+        audio.src = src;
+    };
+    const playSong = () => {
+        if (!audio.src) return;
+
+        audio.play();
+    };
 
     return {
-        audio,
         setSong,
-        play,
+        playSong,
     }
 }
 

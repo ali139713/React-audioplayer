@@ -1,8 +1,12 @@
-.button{
-    background-color: gray;
+button{
+    background-color: lightgray ;
     border-radius: 50%;
-    height:90%;
-    width:4%;
-    margin-top:2.8%;
+}
+button:hover{
+    background-color: lightslategrey;
+}
+.fa-play{
     
+    font-size:medium;
+    line-height: 20px;
 }

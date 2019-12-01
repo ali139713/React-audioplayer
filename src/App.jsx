@@ -7,30 +7,41 @@ import Playlist from './Components/Playlist';
 
 class App extends Component {
  
-   
+
+    state = { songName:'', selectedSongs:[]};
+     
+
     
 
-    state = {
-      selectedSongs: [],
-  };
-
-
+  
 
   onUpdateState=(selectedSongs)=>{
-    this.setState({selectedSongs});
+    this.setState({selectedSongs:selectedSongs});
 
+  }
+
+  compareName=(songname)=>{
+     if(this.selectedSongs===songname)
+    
+     this.setState({songName:songname});
+     
+    
+ 
+   
   }
   
   
 
   render() {
         const selectedSongs=this.state.selectedSongs;
-        console.log({selectedSongs})
+        const songName= this.state.songName;
+        console.log({songName}); 
+       
     return (
     <div className="app">
       
-           <Playerbody  Songs={selectedSongs}/>
-           <Playlist Songs={selectedSongs}  onSongChange={this.onUpdateState}/>
+           <Playerbody  Songs={selectedSongs} songname={songName}/>
+           <Playlist Songs={selectedSongs}   onSongChange={this.onUpdateState}  onNameChange={this.compareName}/>
   
    </div>
     

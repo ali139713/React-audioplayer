@@ -4,8 +4,9 @@ import React, { Component } from 'react';
 class Songtitle extends Component{
 
     render(){
+        const songname=this.props.songname;
         return(
-            <div className="songTitle">This is the title of the present song.......</div>
+        <div className="songTitle">{songname}</div>
         );
     }
 }

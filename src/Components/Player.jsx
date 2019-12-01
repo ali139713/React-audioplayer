@@ -14,10 +14,13 @@ class Player extends Component{
 
     handleOnClick = event => {
         const {name} = event.target;
+        const {song}=this.props.Songs;
 
         switch(name){
             case 'play':
-                
+               
+                  
+            
              
                 break;
             case 'previous':
@@ -34,9 +37,11 @@ class Player extends Component{
     };
 
     render(){
+        const songname=this.props.songname;
+        console.log(songname);
         return(
             <div className="player">
-                <Songtitle/>
+                <Songtitle songname={songname}/>
                 <Songslider/>
                 <Time/>
                 <div className="Row">

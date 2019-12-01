@@ -11,26 +11,32 @@ class Playlist extends Component {
    handleChange=(event)=>{
     const files = Array.from(event.target.files);
     this.props.onSongChange(files);
+    
    }
     
 
 
     handleOnClick = song => {
+        
         const reader = new FileReader();
+        this.props.onNameChange(song.name);
+        debugger
         reader.readAsDataURL(song);
         reader.onload = () => {
             const audioPlayer = AudioSingleton.getInstance();
             audioPlayer.setSong(reader.result);
+            
+          
             audioPlayer.playSong();
-        }
     }
-   
+    }
+      
 
  
 
     render() {
         const  selectedSongs  = this.props.Songs;
-        console.log({selectedSongs})
+      
         return (
             <div className="playlist">
                 <Addsong onSongsSelect={this.handleChange}  />

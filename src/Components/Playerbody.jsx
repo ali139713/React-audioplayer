@@ -9,12 +9,13 @@ class Playerbody extends Component{
 
         const selectedSongs=this.props.Songs;
         const songname=this.props.songname;
-        console.log({songname})
+        const nextSongName=this.props.nextSongName;
        
+        
         return(
             <div className="playerbody">
                 <Logo/>
-                <Player Songs={selectedSongs} songname={songname}/>
+                <Player Songs={selectedSongs} songname={songname} nextSongName={nextSongName} />
 
             </div>
         );

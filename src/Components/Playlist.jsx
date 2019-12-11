@@ -16,15 +16,29 @@ class Playlist extends Component {
     
 
 
-    handleOnClick = song => {
+    handleOnClick = (obj) => {
+       
+        const song=obj.song;
+        const songIndex=obj.songIndex;
+        
         
         const reader = new FileReader();
+       
+        
+        this.props.onSongDuration(song.duration);
+        console.log(song.duration)
         this.props.onNameChange(song.name);
-        debugger
+        this.props.onNextSong(songIndex);
+       
+       
         reader.readAsDataURL(song);
+       
         reader.onload = () => {
             const audioPlayer = AudioSingleton.getInstance();
+           
             audioPlayer.setSong(reader.result);
+            
+            
             
           
             audioPlayer.playSong();

@@ -38,12 +38,14 @@ class Player extends Component{
 
     render(){
         const songname=this.props.songname;
-        console.log(songname);
+        const nextSongName=this.props.nextSongName;
+       
+       
         return(
             <div className="player">
                 <Songtitle songname={songname}/>
                 <Songslider/>
-                <Time/>
+                <Time />
                 <div className="Row">
                     <Button icon='step-backward' onClick={this.handleOnClick} />
                     <Button icon='backward' onClick={this.handleOnClick} />
@@ -53,7 +55,7 @@ class Player extends Component{
                     </div>
 
                     <Volumeslider/>
-                    <Nextsongtitle/>
+                    <Nextsongtitle nextSongName={nextSongName}/>
             </div>
         );
     }

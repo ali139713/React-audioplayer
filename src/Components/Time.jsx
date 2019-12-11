@@ -3,9 +3,11 @@ import React, { Component } from 'react';
 import Currenttime from './Currenttime';
 import Duration from './Duration';
 
+
+
 const Time =()=>{
 
-    
+   
         return(
             <div className="time">
              <Currenttime/>
